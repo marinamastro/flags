@@ -23,11 +23,17 @@ function reducer (state,action){
     case "SET_COUNTRIES_BY_NAME":{        
       return {...state,countriesByName:action.payload}
     }
+    case "SET_COUNTRIES_BY_REGION":{        
+      return {...state,countriesByRegion:action.payload}
+    }
     case "MOSTRAR_TODOS":{        
       return {...state,mostrarTodos:action.payload}
     }
     case "SET_COUNTRY":{        
       return {...state,country:action.payload}
+    }
+    case "VACIAR_COUNTRIES_BY_NAME":{        
+      return {...state,countriesByName:[]}
     }
       default : {return state}
   }   
