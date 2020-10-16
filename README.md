@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 En este proyecto vi algunas cosas básicas sobre Redux, fueron mis primeras nociones, aprendí para que se usa el dispatch y como se almacenan los datos
-
+Miralo acá --> https://world-countries-flags.netlify.app/
 ## Available Scripts
 
 In the project directory, you can run:
