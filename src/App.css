@@ -1,38 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+*{
+  box-sizing: border-box;
+}
 .App {
+  font-family: 'Nunito Sans', sans-serif;
+  color: #111517;
+}
+body{
+  background-color: #fafafa;
+}
+a{
+  color: #111517;
+  text-decoration: none;
+}
+.titulo-country-detail{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.titulo-country-detail:hover{
+  text-decoration: underline;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container-country{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: row wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.country-data{
+  padding-left: 2rem;
+  width: 50%;
+  position: relative;
+}
+.country-data img{
+  width: 20%;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+}
+.country-data p{
+  margin: 0.3rem 0;
+}
+.map{
+  width: 50%;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width:700px){
+  .country-data{
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .map{
+    width: 100%;
   }
 }
