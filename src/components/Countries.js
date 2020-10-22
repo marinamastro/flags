@@ -12,7 +12,7 @@ function Countries (){
     const countriesByName=useSelector(state=>state.countriesByName)  
     const volver=useSelector(state=>state.mostrarTodos)  
     const countriesByRegion=useSelector(state=>state.countriesByRegion)
-    console.log(countriesByRegion)
+   
     useEffect(()=>{
         fetch("https://restcountries.eu/rest/v2/all")
         .then(response=>response.json())
