@@ -21,7 +21,7 @@ function Countries (){
             payload:data
         }))
         .catch(error=>console.log(error))
-    },[dispatch])    
+    },[])    
 
     if(countriesByName&&countriesByName.hasOwnProperty("status")&&!volver){
         return(
