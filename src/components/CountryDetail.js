@@ -7,7 +7,7 @@ function CountryDetail (props){
     const dispatch = useDispatch();
     const name=props.match.match.params.name;
     const country = useSelector(state=>state.country)
-    console.log(country)
+    
     useEffect(()=>{
         fetch("https://restcountries.eu/rest/v2/name/"+name)
         .then(response=>response.json())
@@ -15,12 +15,16 @@ function CountryDetail (props){
             type:"SET_COUNTRY", //mando los datos al estado
             payload:data
         }))
-        .catch(error=>console.log(error))
+        .catch(error=>console.log(error));
+        return ()=>{
+            dispatch({type:"CLEAN_COUNTRY_DETAIL"})
+        }
     },[])  
 
     return(
         <>
-        <Link to="/">
+        {country&&country.length===0 ? <h1 style={{textAlign:"center"}}>Loading ...</h1>:
+       <> <Link to="/">
             <h1 className="titulo-country-detail">250 World Country Flags</h1>
         </Link>
         <div className="container-country">
@@ -49,7 +53,7 @@ function CountryDetail (props){
             <div className="map">
             <iframe width="600" height="450" frameborder="0" style={{border:0}} src={`https://www.google.com/maps/embed/v1/search?q=${name}&key=AIzaSyDxS87tXZm3pDYP3150emmWF68tN4Guk24`} allowfullscreen></iframe>
             </div>
-        </div>
+        </div></>}
         </>
     )
 }

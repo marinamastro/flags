@@ -35,6 +35,9 @@ function reducer (state,action){
     case "VACIAR_COUNTRIES_BY_NAME":{        
       return {...state,countriesByName:[]}
     }
+    case "CLEAN_COUNTRY_DETAIL":{
+      return {...state,country:[]}
+    }
       default : {return state}
   }   
 }
